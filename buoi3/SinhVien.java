@@ -146,10 +146,16 @@ public class SinhVien {
     }
 
     // ham tra ve ten cua sinh vien
-    public String getName() {
+    public String layTen() {
+    	this.hoTen = this.hoTen.trim();
         String[] temp = this.hoTen.split(" ");
 		return (temp[temp.length-1]);
     }
+    
+    public String layMSSV() {
+    	return this.mssv;
+    }
+    
     public static void main(String[] args) {
         
     }
