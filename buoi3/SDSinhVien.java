@@ -14,6 +14,8 @@ public class SDSinhVien {
         // khoi tao danh sach sinh vien
         for (i=0; i < n; i++)
             ds[i] = new SinhVien();
+        
+        // nhap danh sach sinh vien
         for (i=0; i < n; i++) {
             System.out.println("-----Nhap vao sinh vien thu " + (i+1) + "-----");
             ds[i].nhap();
@@ -38,7 +40,7 @@ public class SDSinhVien {
         for (i=1; i < n; i++)
             if (ds[i].diemTrungBinh() > max)
                 max = ds[i].diemTrungBinh();
-        System.out.println("\n" + "Sinh vien co diem trung binh cao nhat la: " + max);
+        System.out.println("\nSinh vien co diem trung binh cao nhat la: " + max);
         for (i=0; i < n; i++) 
             if (ds[i].diemTrungBinh() == max)
                 ds[i].hienThi();
@@ -46,7 +48,21 @@ public class SDSinhVien {
         // sap xep danh sach sinh vien theo bang chu cai trong ten
         for (i=0; i < n; i++) 
             for (j=i+1; j < n; j++)
-                if (ds[i].getName().compareTo(ds[j].getName()) > 0){
+                if (ds[i].layTen().compareTo(ds[j].layTen()) > 0){
+                    SinhVien temp = ds[i];
+                    ds[i] = ds[j];
+                    ds[j] = temp;
+                }
+        System.out.println("\n" + "Danh sach sinh vien sau khi sap xep: ");
+        for (i=0; i < n; i++) {
+            System.out.println("-----Thong tin sinh vien thu " + (i+1) + "-----");
+            ds[i].hienThi();
+        }
+        
+        // sap xep danh sach sinh vien theo thu tu tang dan cua ma so sinh vien
+        for (i=0; i < n; i++) 
+            for (j=i+1; j < n; j++)
+                if (ds[i].layMSSV().compareTo(ds[j].layMSSV()) > 0){
                     SinhVien temp = ds[i];
                     ds[i] = ds[j];
                     ds[j] = temp;
