@@ -9,7 +9,7 @@ public class Gach {
     private long giaBan;
 
     public Gach() {
-        maSo = mau = "";
+        maSo = mau = new String();
         soLuong = chieuDai = chieuRong = 0;
         giaBan = 0;
     }
@@ -59,7 +59,7 @@ public class Gach {
     }
 
     public float giaBanLe() {
-        return (float)(this.giaBan + (this.giaBan * 20 / 100));
+        return (float)(this.giaBan / this.soLuong) + (this.giaBan*20/100);
     }
 
     public int DTNenToiDa() {
@@ -77,6 +77,9 @@ public class Gach {
     }
 
     public static void main(String[] args) {
-        
+        Gach temp = new Gach();
+        temp.nhap();
+        temp.hienThi();
+        System.out.println(temp.layGiaBan());
     }
 }
