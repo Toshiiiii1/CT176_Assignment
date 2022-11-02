@@ -39,7 +39,6 @@ public class KhachHang {
 
     // ham in thong tin
     public void in() {
-        System.out.println("********************");
         System.out.println("Can cuoc cong dan: " + this.cccd);
         System.out.println("Ho & ten khach hang: " + this.hten);
         System.out.println("Dia chi cua khach hang: " + this.dchi);
@@ -47,7 +46,7 @@ public class KhachHang {
 
     // ham tra ve thong tin
     public String toString() {
-        return "********************" + "\n" + "Can cuoc cong dan: " + this.cccd + "\n" + "Ho & ten khach hang: " + this.hten + "\n" + "Dia chi cua khach hang: " + this.dchi + "\n";
+        return "Can cuoc cong dan: " + this.cccd + "\n" + "Ho & ten khach hang: " + this.hten + "\n" + "Dia chi cua khach hang: " + this.dchi + "\n";
     } 
 
     public static void main(String[] args) {
