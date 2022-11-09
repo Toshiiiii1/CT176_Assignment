@@ -50,6 +50,11 @@ public class ChiTiet {
         return "\tSo luong hang hoa: " + this.sluong + "\n" + "\tDon gia hang hoa: " + this.dgia + "\n" + this.hh;
     }
     
+    // ham tinh gia tri hang hoa
+    public double giaTriHangHoa() {
+    	return (double)this.sluong * this.dgia;
+    }
+    
     public static void main(String[] args) {
         
     }
