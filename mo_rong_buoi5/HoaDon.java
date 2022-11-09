@@ -107,6 +107,8 @@ public class HoaDon {
     			continue;
     		sum += i.giaTriHangHoa();
     	}
+    	if (this.kh instanceof KhachHangVIP)
+    		sum *= (100 - kh.layTiLeGiam())/100;
     	return sum;
     }
 
