@@ -98,10 +98,21 @@ public class HoaDon {
         }
         return str;
     }
+    
+    // ham tinh tong
+    public double tinhTong() {
+    	double sum = 0.0;
+    	for (ChiTiet i : this.ct) {
+    		if (i == null)
+    			continue;
+    		sum += i.giaTriHangHoa();
+    	}
+    	return sum;
+    }
 
     public static void main(String[] args) {
         HoaDon temp = new HoaDon();
         temp.nhap();
-        System.out.println(temp);
+        System.out.println(temp.tinhTong());
     }
 }
